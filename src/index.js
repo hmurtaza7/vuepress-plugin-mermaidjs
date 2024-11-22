@@ -1,8 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { prepareClientConfigFile } from 'prepareClientConfigFile';
 
 const mermaidPlugin = async (options, ctx) => {
   const { default: mermaidjsPlugin } = await import('./markdownItPlugin.js');
@@ -15,7 +13,8 @@ const mermaidPlugin = async (options, ctx) => {
     extendsMarkdown (md) {
       md.use(mermaidjsPlugin);
     },
-    clientAppEnhanceFiles: path.resolve(__dirname, 'clientAppEnhance.js')
+
+    clientConfigFile: (app) => prepareClientConfigFile(app, options),
   }
 }
 
