@@ -1,6 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { prepareClientConfigFile } from 'prepareClientConfigFile';
+import { prepareClientConfigFile } from './prepareClientConfigFile.js';
 
 const mermaidPlugin = async (options, ctx) => {
   const { default: mermaidjsPlugin } = await import('./markdownItPlugin.js');
