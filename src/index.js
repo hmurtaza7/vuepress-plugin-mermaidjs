@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = async (options, ctx) => {
+const mermaidPlugin = async (options, ctx) => {
   const { default: mermaidjsPlugin } = await import('./markdownItPlugin.js');
 
   return {
@@ -19,4 +19,4 @@ const app = async (options, ctx) => {
   }
 }
 
-export default app;
+export default mermaidPlugin;
