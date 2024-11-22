@@ -1,5 +1,5 @@
 import { hash } from '@vuepress/shared'
-import markdownItFence from './markdownItFence'
+import markdownItFence from './markdownItFence.js'
 
 export default function mermaidjsPlugin (md) {
   return markdownItFence(md, 'mermaid-fence', {
