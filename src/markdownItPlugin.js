@@ -1,7 +1,7 @@
-const { hash } = require('@vuepress/shared')
-const markdownItFence = require('./markdownItFence')
+import { hash } from '@vuepress/shared'
+import markdownItFence from './markdownItFence'
 
-module.exports = function mermaidjsPlugin (md) {
+export function mermaidjsPlugin (md) {
   return markdownItFence(md, 'mermaid-fence', {
     render: (tokens, idx, _options, env, self) => {
       const token = tokens[idx]

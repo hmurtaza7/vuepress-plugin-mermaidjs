@@ -1,6 +1,6 @@
-const path = require('path')
+import path from 'path';
 
-module.exports = (options, ctx) => {
+const app = (options, ctx) => {
   return {
     name: 'vuepress-plugin-mermaidjs',
     define: {
@@ -12,3 +12,5 @@ module.exports = (options, ctx) => {
     clientAppEnhanceFiles: path.resolve(__dirname, 'clientAppEnhance.js')
   }
 }
+
+export default app;

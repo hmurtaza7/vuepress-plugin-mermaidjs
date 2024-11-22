@@ -1,4 +1,4 @@
-module.exports = function markdownItFence(md, name, opts) {
+export function markdownItFence(md, name, opts) {
 
   function defaultValidate(params) {
     return params.trim().split(' ', 2)[0] === name
