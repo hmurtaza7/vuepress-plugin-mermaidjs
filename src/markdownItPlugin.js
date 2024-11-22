@@ -1,7 +1,7 @@
 import { hash } from '@vuepress/shared'
 import markdownItFence from './markdownItFence'
 
-export function mermaidjsPlugin (md) {
+export default function mermaidjsPlugin (md) {
   return markdownItFence(md, 'mermaid-fence', {
     render: (tokens, idx, _options, env, self) => {
       const token = tokens[idx]
