@@ -1,4 +1,4 @@
-const { hash } = require('@vuepress/shared-utils')
+const { hash } = require('@vuepress/shared')
 const markdownItFence = require('./markdownItFence')
 
 module.exports = function mermaidjsPlugin (md) {
